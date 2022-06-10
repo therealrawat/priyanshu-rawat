@@ -1,0 +1,268 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+header {
+    background: #0f1418;
+    color: #fff;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.container {
+    padding-left: 10rem;
+    padding-top: 3rem;
+    padding-right: 4rem;
+    padding-bottom: 4rem;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.navbar h3 {
+    padding-top: 1rem;
+    transition: all 0.7s ease;
+    opacity: 0.5;
+    letter-spacing: 2px;
+}
+
+.navbar h3:hover {
+    opacity: 1;
+}
+
+.titlename {
+    transition: all 2s ease;
+    cursor: pointer;
+    transform: translateY(8px);
+}
+
+.titlename:hover {
+    transform: translateX(55vw);
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    height: 55vh;
+    align-items: center;
+}
+
+.grid .main-img {
+    height: 55vh;
+    background: white;
+}
+
+.grid .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.grid .socials a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadein;
+    animation-duration: 3s;
+}
+
+a.twitter {
+    background-color: rgb(212, 75, 37);
+}
+
+a.linkedin {
+    background-color: rgb(154, 212, 37);
+}
+
+a.instagram {
+    background-color: rgb(214, 166, 36);
+}
+
+a.github {
+    background-color: rgb(42, 152, 203);
+}
+
+
+
+
+.grid .socials .fa {
+    font-size: 150%;
+    transition: all 0.7s ease;
+}
+
+.grid .socials .fa:hover {
+    color: #0f1418;
+}
+
+
+
+
+.main-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.grid-3 .myquote {
+    align-items: flex-start;
+    display: flex;
+    justify-content: end;
+    animation: fadein 2s ease;
+    opacity: 0.7;
+}
+
+.grid-3 .myproject {
+    transition: all 5s ease;
+}
+
+.grid-3 .myproject:hover {
+    color: #4c6375;
+}
+
+
+.mobileonly {
+    display: none;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slidLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+hr {
+    opacity: 0.009;
+}
+
+.mywork li {
+    list-style: none;
+    padding: 0.5rem 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+.mywork li:hover {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+     outline-color: #fff;
+}
+.earth {
+    width: 18px;
+    font-size: 1rem;
+    animation: fullrotate 1s infinite 0.1s;
+}
+@keyframes fullrotate {
+    100% {transform: rotate(360deg);}
+  }
+
+
+
+
+
+@media screen and (max-width: 667px) {
+    .container {
+        padding: 3rem;
+        overflow: visible;
+        height: fit-content;
+    }
+    .navbar h3 {
+        font-size: 16px;
+    }
+
+    .grid {
+        display: inline-block;
+        margin: 2rem auto;
+        grid-gap: 1rem;
+    }
+
+    .grid .socials {
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+        padding-bottom: 1rem;
+    }
+
+    .grid .socials a {
+        margin: 5px;
+    }
+
+    .grid-3 {
+        margin-top: 2rem;
+        display: none;
+    }
+
+    .mobileonly {
+        margin: 1rem 0;
+        display: block;
+        line-height: 1.3rem;
+    }
+    
+    .mobileonly p span {
+        color: rgb(42, 152, 203);
+        transition: 0.5s ease-in;
+    }
+    .mobileonly p span:hover {
+        color: rgb(212, 75, 37);
+    }
+    .msubt {
+        opacity: 0.2;
+        letter-spacing: 1.5px;
+        font-size: 0.7rem;
+    }
+}
